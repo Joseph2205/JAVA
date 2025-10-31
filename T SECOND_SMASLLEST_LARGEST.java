@@ -1,10 +1,10 @@
 public class main{
     public static void main(String[]args){
-        int []arr = {1,2,9,4,5,10,10};
+        int []arr = {5,5,5};
         int min=Integer.MAX_VALUE;
         int sec_min=Integer.MAX_VALUE;
-        int max = 0;
-        int sec_max = 0;
+        int max = Integer.MIN_VALUE;
+        int sec_max = Integer.MIN_VALUE;
         
         for(int i=0;i<arr.length;i++){
             if(arr[i]<min){
@@ -22,9 +22,17 @@ public class main{
                 sec_max = arr[i];
             }
         }
+        if(sec_min==Integer.MAX_VALUE){
+              System.out.println(-1);
+        }else
+        System.out.println(sec_min);
        // System.out.println(min);
-         System.out.println(sec_min);
+         
          // System.out.println(max);
+         if(sec_max==Integer.MIN_VALUE){
+             System.out.println(-1);
+         }
+         else
          System.out.println(sec_max);
     }
 }
